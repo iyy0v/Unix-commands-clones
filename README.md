@@ -8,8 +8,7 @@ copy the content from a file into another (and create it if it doesn't exist)
 cp.exe <source> <destination>
 ## ls : 
 print the content of a directory with the ability to add an option for 'directories only' or 'files only' 
-### Usage: 
-ls.exe <dir>[optional] <option>[optional]
+### Usage: '''bash ls.exe [optional] <option>[optional] '''
 ### options:
 - __-r__ : directories only
 - __-f__ : files only

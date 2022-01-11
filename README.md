@@ -4,11 +4,12 @@ Scripts in C that do the work of some basic Unix commands <br />
 
 ## cp :
 copy the content from a file into another (and create it if it doesn't exist)
-### Usage :
-cp.exe <source> <destination>
+### Usage : 
+```bash cp.exe <source> <destination>```
 ## ls : 
 print the content of a directory with the ability to add an option for 'directories only' or 'files only' 
-### Usage: '''bash ls.exe [optional] <option>[optional] '''
+### Usage: 
+```bash ls.exe [optional] <option>[optional]```
 ### options:
 - __-r__ : directories only
 - __-f__ : files only

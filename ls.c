@@ -20,6 +20,11 @@ int main(int argc, char* argv[])
 	else if(argc == 2) { 
 		if(argv[1][0] != '-')
 			dir = opendir(argv[1]); 
+			if(dir == NULL) { 
+	    			perror(argv[1]);
+	    			closedir(dir);
+	    			return -1;
+	 		}
 		else 
 			dir = opendir("."); 
 	}

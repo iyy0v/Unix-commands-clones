@@ -1,6 +1,6 @@
 # Unix commands clones
 Scripts in C that do the work of some basic Unix commands <br />
-(This was a test I had in my OS class during my 3rd year)
+(This was a work I had did for my OS class during my 3rd year)
 
 ## cp :
 copy the content from a file into another (and create it if it doesn't exist)

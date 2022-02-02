@@ -13,8 +13,8 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	if(access(argv[1],F_OK)==0) { // Verifier si le fichier source existe
-		if(access(argv[1],R_OK)==0) { // Verifier la permission de lecture du fichier source
+	if(access(argv[1],F_OK)==0) { // Verify the existance of the source file
+		if(access(argv[1],R_OK)==0) { // Verify the 'Read' permission of the source file
 			fs = open(argv[1],O_RDONLY);
 		}
 		else{
@@ -27,14 +27,14 @@ int main(int argc, char *argv[])
 		exit(1);
 	}
 
-	if(access(argv[2],F_OK)==0) { // supprimer le fichier destinataire s'il existe deja, puis recreer le
+	if(access(argv[2],F_OK)==0) { // Recreate the destination file if it already exists
 		fd = open(argv[2],O_WRONLY | O_CREAT | O_TRUNC);	
 	}
-	else{ // creer le fichier destinataire s'il n'existe pas
+	else{ // Create the destination file if it doesn't exist
 		fd = open(argv[2],O_WRONLY | O_CREAT);
 	}
 
-	while(read(fs,&buf,1) != 0) { write(fd,&buf,1); } // copier le contenu du fichier source vers le fichier destinataire
+	while(read(fs,&buf,1) != 0) { write(fd,&buf,1); } // Copy the content of the source file to the destination file
 	
 	close(fs);
 	close(fd);
